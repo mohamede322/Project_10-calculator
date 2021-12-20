@@ -62,9 +62,9 @@ function keyBoard() {
     let key = e.keyCode;
     let validkeys = [
       48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 107, 109, 106, 111, 190, 96, 97,
-      98, 99, 100, 101, 102, 103, 104, 105,
+      98, 99, 100, 101, 102, 103, 104, 105, 110,
     ];
-
+    console.log(key);
     if (~validkeys.indexOf(key)) {
       key === 48
         ? (key = 0)
@@ -116,6 +116,8 @@ function keyBoard() {
         ? (key = "8")
         : key === 105
         ? (key = "9")
+          ? key === 110
+          : (key = ".")
         : "";
       current.innerText += key;
       if (result.value != "") {
