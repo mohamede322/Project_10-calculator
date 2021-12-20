@@ -116,8 +116,8 @@ function keyBoard() {
         ? (key = "8")
         : key === 105
         ? (key = "9")
-          ? key === 110
-          : (key = ".")
+        : key === 110
+        ? (key = ".")
         : "";
       current.innerText += key;
       if (result.value != "") {
