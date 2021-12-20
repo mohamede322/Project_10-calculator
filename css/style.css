@@ -1,0 +1,114 @@
+body {
+  font-family: "Cairo", sans-serif;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: inherit;
+  border: none;
+  outline: none;
+  text-decoration: none;
+}
+.container {
+  height: 100vh;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ddd;
+  overflow: hidden;
+}
+.calc-container {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 25px;
+  background-color: #396eb0;
+  border-radius: 5px;
+}
+.top-side {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+}
+#current {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  font-size: 14px;
+  color: white;
+  transition: 0.1s ease;
+}
+#result {
+  flex: 1;
+  height: 60px;
+  cursor: default;
+  border-radius: 3px;
+  background-color: #2e4c6d;
+  box-shadow: inset 0 5px 0 rgba(0, 0, 0, 0.4);
+  text-align: end;
+  font-size: 20px;
+  color: white;
+  padding: 10px;
+  transition: 0.1s ease;
+}
+#reset {
+  width: 78px;
+  height: 60px;
+  background-color: #f05454;
+  color: white;
+  font-size: 30px;
+}
+#reset:hover {
+  background-color: #db3c3c;
+}
+.bot-side {
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+  gap: 16px;
+}
+button {
+  cursor: pointer;
+  background-color: #eee;
+  height: 40px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 3px;
+  transition: 0.1s linear;
+  box-shadow: 0 5px 0 rgba(0, 0, 0, 0.4);
+}
+button:hover {
+  background-color: #ddd;
+}
+.clicked {
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.4);
+  transform: translateY(2px);
+  background: rgb(210, 210, 210);
+}
+.own {
+  position: absolute;
+  top: 50px;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .calc-container {
+    width: 300px;
+  }
+  #result {
+    width: 150px;
+  }
+  .own {
+    display: none;
+  }
+}
