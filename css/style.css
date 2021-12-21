@@ -45,6 +45,8 @@ body {
   font-size: 14px;
   color: white;
   transition: 0.1s ease;
+  overflow: hidden;
+  max-width: 250px;
 }
 #result {
   flex: 1;
@@ -58,6 +60,7 @@ body {
   color: white;
   padding: 10px;
   transition: 0.1s ease;
+  overflow: hidden;
 }
 #reset {
   width: 78px;
