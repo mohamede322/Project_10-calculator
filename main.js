@@ -125,17 +125,6 @@ function keyBoard() {
         result.value = "";
       }
     }
-    if (key === 13) {
-      result.value = eval(current.innerText);
-      if (result.value.includes(".")) {
-        result.value = eval(current.innerText).toFixed(2);
-      }
-      if (current.innerText === "") {
-        result.value = "";
-      }
-      result.style.paddingTop = "20px";
-    }
-
     if (key === 67) {
       result.value = "";
       current.innerText = "";
